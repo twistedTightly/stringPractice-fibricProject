@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class SPStudent;  //why does this go here? what is it doing?
+
 @interface SPViewController : UIViewController
+
 
 @end
