@@ -46,7 +46,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+// Not working, unsure how to connect fields to controller
 - (IBAction)firstNameEdited:(id)sender {
     _currentStudent.firstName = self.firstNameInputField.text;
     _studentNameDisplay.text = [_currentStudent getStudentFirstName];
@@ -63,6 +63,12 @@
     _currentStudent.className = self.lastNameInputField.text;
     _studentNameDisplay.text = [_currentStudent getClassName];
     [self resignFirstResponder];
+}
+
+// Trying alternative to get field to end editing
+- (BOOL) textFieldShouldReturn: lastNameInput {
+    [lastNameInput resignFirstResponder];
+    return NO;
 }
 
 // Ends editing so input will be saved, keyboard will be dismissed
