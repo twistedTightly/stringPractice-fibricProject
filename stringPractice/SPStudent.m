@@ -41,4 +41,12 @@
     return self.className;
 }
 
+- (NSString *) getStudentFirstName {
+    return self.firstName;
+}
+
+- (NSString *) getStudentLastName {
+    return self.lastName;
+}
+
 @end

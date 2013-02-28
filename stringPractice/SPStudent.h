@@ -15,5 +15,7 @@
 - (void) setClassName: (NSString *) classNameInput;
 
 - (NSString *) getClassName;
+- (NSString *) getStudentFirstName;
+- (NSString *) getStudentLastName;
 
 @end
