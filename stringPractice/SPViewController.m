@@ -34,7 +34,7 @@ UIView *newStudentView;
    _currentStudent = [[SPStudent alloc] init];
     
     // Enables the user to stop editing the text field when they tap outside the field
-    newStudentView = [[UIView alloc] init];
+
     UITapGestureRecognizer *tapScroll = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapped)];
     tapScroll.cancelsTouchesInView = NO;
     [newStudentView addGestureRecognizer:tapScroll];
@@ -60,7 +60,6 @@ UIView *newStudentView;
     _studentNameDisplay.text = [_currentStudent getStudentLastName];
     [self resignFirstResponder];
 }
-
 
 - (IBAction)classNameEdited:(id)sender {
     _currentStudent.className = self.lastNameInputField.text;
