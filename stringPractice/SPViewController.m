@@ -26,7 +26,6 @@
 @implementation SPViewController
 
 @synthesize currentStudent = _currentStudent;
-UIView *newStudentView;
 
 - (void)viewDidLoad
 {
@@ -34,10 +33,9 @@ UIView *newStudentView;
    _currentStudent = [[SPStudent alloc] init];
     
     // Enables the user to stop editing the text field when they tap outside the field
-
     UITapGestureRecognizer *tapScroll = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapped)];
     tapScroll.cancelsTouchesInView = NO;
-    [newStudentView addGestureRecognizer:tapScroll];
+    [self.view addGestureRecognizer:tapScroll];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -69,7 +67,7 @@ UIView *newStudentView;
 
 // Ends editing so input will be saved, keyboard will be dismissed
 - (void) tapped {
-    [newStudentView endEditing:YES];
+    [self.view endEditing:YES];
 }
 
 
