@@ -25,6 +25,8 @@
 
 @synthesize currentStudent;
 @synthesize studentNameDisplay;
+//@synthesize delegate;
+@synthesize someArray;
 
 - (void)viewDidLoad
 {
@@ -72,5 +74,11 @@
 - (void) tapped {
     [self.view endEditing:YES];
 }
+
+// COPIED from stackoverflow answer
+- (IBAction)doneButtonPressed:(id)sender {
+    [delegate SPCreateStudentViewControllerDidFinish:self];
+}
+
 
 @end
