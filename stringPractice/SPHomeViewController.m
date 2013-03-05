@@ -12,10 +12,13 @@
 
 // holds student objects returned from create student view
 @property (strong, nonatomic) NSMutableArray *students;
+@property (weak, nonatomic) IBOutlet UILabel *studentPropertyDisplay;
 
 @end
 
 @implementation SPHomeViewController
+
+@synthesize studentPropertyDisplay;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +39,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// COPIED from stackoverflow answer
+- (void)SPCreateStudentViewControllerDidFinish:(SPCreateStudentViewController *)SPCreateStudentViewController {
+    NSMutableArray* anotherArray = SPCreateStudentViewController.someArray;
+    //studentPropertyDisplay.text = anotherArray;
 }
 
 @end

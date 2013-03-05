@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPCreateStudentViewController.h"
 
-@interface SPHomeViewController : UIViewController
+@interface SPHomeViewController : UIViewController <SPCreateStudentViewControllerDelegate>
 
 @end
