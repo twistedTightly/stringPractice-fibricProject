@@ -179,26 +179,6 @@
             <point key="canvasLocation" x="-324" y="41"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SPCreateStudentViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPCreateStudentViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="classNameEdited:"/>
-                <relationship kind="action" name="firstNameEdited:"/>
-                <relationship kind="action" name="lastNameEdited:"/>
-                <relationship kind="outlet" name="classInputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="firstNameInputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="lastNameInputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="studentNameDisplay" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SPHomeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPHomeViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

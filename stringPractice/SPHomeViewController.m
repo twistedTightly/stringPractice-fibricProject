@@ -10,6 +10,9 @@
 
 @interface SPHomeViewController ()
 
+// holds student objects returned from create student view
+@property (strong, nonatomic) NSMutableArray *students;
+
 @end
 
 @implementation SPHomeViewController

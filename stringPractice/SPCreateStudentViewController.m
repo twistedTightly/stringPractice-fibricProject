@@ -9,8 +9,6 @@
 #import "SPCreateStudentViewController.h"
 #import "SPStudent.h"
 
-@class SPStudent;  //why does this go here? what is it doing?
-
 @interface SPCreateStudentViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameInputField;
@@ -39,6 +37,7 @@
     [self.view addGestureRecognizer:tapScroll];
     
 	// Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)didReceiveMemoryWarning

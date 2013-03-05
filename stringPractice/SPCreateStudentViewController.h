@@ -9,9 +9,23 @@
 
 #import <UIKit/UIKit.h>
 
-@class SPStudent;  //why does this go here? what is it doing?
+// code format copied from stackoverflow.com/questions/5244830/using-a-delegate-to-pass-data-back-up-the-navigation-stack
 
-@interface SPCreateStudentViewController : UIViewController
+@protocol SPCreateStudentViewControllerDelegate;
 
+@interface SPCreateStudentViewController : UIViewController {
+    id<SPCreateStudentViewControllerDelegate> delegate;
+    
+    NSMutableArray* someArray;
+}
+
+@property (nonatomic, assign) id<SPCreateStudentViewControllerDelegate> delegate;
+@property (nonatomic, retain) NSMutableArray* someArray;
+
+@end
+
+@protocol SPCreateStudentViewControllerDelegate
+
+- (void)SPCreateStudentViewControllerDidFinish:(SPCreateStudentViewController*)SPCreateStudentViewController;
 
 @end
