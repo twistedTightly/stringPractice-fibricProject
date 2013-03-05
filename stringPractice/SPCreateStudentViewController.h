@@ -1,6 +1,6 @@
 
 //
-//  SPViewController.h
+//  SPCreateStudentViewController.h
 //  stringPractice
 //
 //  Created by Learning Technology Lab on 2/20/13.
@@ -11,7 +11,7 @@
 
 @class SPStudent;  //why does this go here? what is it doing?
 
-@interface SPViewController : UIViewController
+@interface SPCreateStudentViewController : UIViewController
 
 
 @end

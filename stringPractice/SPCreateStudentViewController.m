@@ -1,17 +1,17 @@
 //
-//  SPViewController.m
+//  SPCreateStudentViewController.m
 //  stringPractice
 //
 //  Created by Learning Technology Lab on 2/20/13.
 //  Copyright (c) 2013 Learning Technology Lab. All rights reserved.
 //
 
-#import "SPViewController.h"
+#import "SPCreateStudentViewController.h"
 #import "SPStudent.h"
 
 @class SPStudent;  //why does this go here? what is it doing?
 
-@interface SPViewController ()
+@interface SPCreateStudentViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameInputField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameInputField;
@@ -23,14 +23,15 @@
 
 @end
 
-@implementation SPViewController
+@implementation SPCreateStudentViewController
 
-@synthesize currentStudent = _currentStudent;
+@synthesize currentStudent;
+@synthesize studentNameDisplay;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   _currentStudent = [[SPStudent alloc] init];
+   currentStudent = [[SPStudent alloc] init];
     
     // Enables the user to stop editing the text field when they tap outside the field
     UITapGestureRecognizer *tapScroll = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapped)];
@@ -46,36 +47,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-// Not working, unsure how to connect fields to controller
+// Save string input by user to currentStudent object
 - (IBAction)firstNameEdited:(id)sender {
-    _currentStudent.firstName = self.firstNameInputField.text;
-    _studentNameDisplay.text = [_currentStudent getStudentFirstName];
-    [self resignFirstResponder];
+    currentStudent.firstName = self.firstNameInputField.text;
+    studentNameDisplay.text = [currentStudent getStudentFirstName];
 }
 
 - (IBAction)lastNameEdited:(id)sender {
-   _currentStudent.lastName = self.lastNameInputField.text;
-    _studentNameDisplay.text = [_currentStudent getStudentLastName];
-    [self resignFirstResponder];
+   currentStudent.lastName = self.lastNameInputField.text;
+   studentNameDisplay.text = [currentStudent getStudentLastName];
 }
 
-- (IBAction)classNameEdited:(id)sender {
-    _currentStudent.className = self.lastNameInputField.text;
-    _studentNameDisplay.text = [_currentStudent getClassName];
-    [self resignFirstResponder];
+- (IBAction)classNameEdited:(id)sender {currentStudent.className = self.lastNameInputField.text;
+    studentNameDisplay.text = [currentStudent getClassName];
 }
 
-// Trying alternative to get field to end editing - WORKS for enter button on keyboard, DONE on ipad keyboard
 
-- (BOOL) textFieldShouldReturn: lastNameInput {
-    [lastNameInput resignFirstResponder];
-    return NO;
+// Ends editing of text fields for enter button on keyboard, DONE on ipad keyboard
+- (BOOL) textFieldShouldReturn: (UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
-// Ends editing so input will be saved, keyboard will be dismissed
+// Ends editing on touch outside of field - input will be saved, keyboard will be dismissed
 - (void) tapped {
     [self.view endEditing:YES];
 }
-
 
 @end
