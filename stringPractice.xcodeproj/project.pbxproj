@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B003A65516E661CE00483CDE /* SPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B003A65416E661CE00483CDE /* SPHomeViewController.m */; };
 		B0174FC316D56B30002E9B34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0174FC216D56B30002E9B34 /* UIKit.framework */; };
 		B0174FC516D56B30002E9B34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0174FC416D56B30002E9B34 /* Foundation.framework */; };
 		B0174FC716D56B30002E9B34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0174FC616D56B30002E9B34 /* CoreGraphics.framework */; };
@@ -19,10 +20,12 @@
 		B0174FDF16D56B30002E9B34 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0174FDD16D56B30002E9B34 /* MainStoryboard_iPad.storyboard */; };
 		B0B2461A16D6A767001A1F40 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B0B2461916D6A767001A1F40 /* Default.png */; };
 		B0BEAD3F16D7C9DC00D92C36 /* SPStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BEAD3E16D7C9DC00D92C36 /* SPStudent.m */; };
-		B0E4FA9816DD17090054476A /* SPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E4FA9716DD17090054476A /* SPViewController.m */; };
+		B0E4FA9816DD17090054476A /* SPCreateStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E4FA9716DD17090054476A /* SPCreateStudentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B003A65316E661CE00483CDE /* SPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPHomeViewController.h; sourceTree = "<group>"; };
+		B003A65416E661CE00483CDE /* SPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHomeViewController.m; sourceTree = "<group>"; };
 		B0174FBF16D56B30002E9B34 /* stringPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stringPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0174FC216D56B30002E9B34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B0174FC416D56B30002E9B34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,11 +41,11 @@
 		B0174FD816D56B30002E9B34 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B0174FDB16D56B30002E9B34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		B0174FDE16D56B30002E9B34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		B0174FE016D56B30002E9B34 /* SPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPViewController.h; sourceTree = "<group>"; };
+		B0174FE016D56B30002E9B34 /* SPCreateStudentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCreateStudentViewController.h; sourceTree = "<group>"; };
 		B0B2461916D6A767001A1F40 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B0BEAD3D16D7C9DC00D92C36 /* SPStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPStudent.h; sourceTree = "<group>"; };
 		B0BEAD3E16D7C9DC00D92C36 /* SPStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPStudent.m; sourceTree = "<group>"; };
-		B0E4FA9716DD17090054476A /* SPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPViewController.m; sourceTree = "<group>"; };
+		B0E4FA9716DD17090054476A /* SPCreateStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCreateStudentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +97,10 @@
 				B0174FD216D56B30002E9B34 /* SPAppDelegate.m */,
 				B0174FDA16D56B30002E9B34 /* MainStoryboard_iPhone.storyboard */,
 				B0174FDD16D56B30002E9B34 /* MainStoryboard_iPad.storyboard */,
-				B0174FE016D56B30002E9B34 /* SPViewController.h */,
-				B0E4FA9716DD17090054476A /* SPViewController.m */,
+				B003A65316E661CE00483CDE /* SPHomeViewController.h */,
+				B003A65416E661CE00483CDE /* SPHomeViewController.m */,
+				B0174FE016D56B30002E9B34 /* SPCreateStudentViewController.h */,
+				B0E4FA9716DD17090054476A /* SPCreateStudentViewController.m */,
 				B0BEAD3D16D7C9DC00D92C36 /* SPStudent.h */,
 				B0BEAD3E16D7C9DC00D92C36 /* SPStudent.m */,
 				B0174FC916D56B30002E9B34 /* Supporting Files */,
@@ -188,7 +193,8 @@
 				B0174FCF16D56B30002E9B34 /* main.m in Sources */,
 				B0174FD316D56B30002E9B34 /* SPAppDelegate.m in Sources */,
 				B0BEAD3F16D7C9DC00D92C36 /* SPStudent.m in Sources */,
-				B0E4FA9816DD17090054476A /* SPViewController.m in Sources */,
+				B0E4FA9816DD17090054476A /* SPCreateStudentViewController.m in Sources */,
+				B003A65516E661CE00483CDE /* SPHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
