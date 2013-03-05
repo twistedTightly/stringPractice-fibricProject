@@ -65,7 +65,8 @@
     [self resignFirstResponder];
 }
 
-// Trying alternative to get field to end editing
+// Trying alternative to get field to end editing - WORKS for enter button on keyboard, DONE on ipad keyboard
+
 - (BOOL) textFieldShouldReturn: lastNameInput {
     [lastNameInput resignFirstResponder];
     return NO;
