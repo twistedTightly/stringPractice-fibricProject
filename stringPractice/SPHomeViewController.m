@@ -46,6 +46,7 @@
 
 // COPIED from stackoverflow answer
 - (void)SPCreateStudentViewControllerDidFinish:(SPCreateStudentViewController *)SPCreateStudentViewController {
+    NSLog(@"Returning object");
     editedStudent = SPCreateStudentViewController.currentStudent;
     studentPropertyDisplay.text = [editedStudent getStudentFirstName];
 }
