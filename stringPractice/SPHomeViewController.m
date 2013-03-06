@@ -7,18 +7,21 @@
 //
 
 #import "SPHomeViewController.h"
+#import "SPStudent.h"
 
 @interface SPHomeViewController ()
 
 // holds student objects returned from create student view
 @property (strong, nonatomic) NSMutableArray *students;
 @property (weak, nonatomic) IBOutlet UILabel *studentPropertyDisplay;
+@property (strong, nonatomic) SPStudent* editedStudent;
 
 @end
 
 @implementation SPHomeViewController
 
 @synthesize studentPropertyDisplay;
+@synthesize editedStudent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,8 +46,8 @@
 
 // COPIED from stackoverflow answer
 - (void)SPCreateStudentViewControllerDidFinish:(SPCreateStudentViewController *)SPCreateStudentViewController {
-    NSMutableArray* anotherArray = SPCreateStudentViewController.someArray;
-    //studentPropertyDisplay.text = anotherArray;
+    editedStudent = SPCreateStudentViewController.currentStudent;
+    studentPropertyDisplay.text = editedStudent.firstName;
 }
 
 @end

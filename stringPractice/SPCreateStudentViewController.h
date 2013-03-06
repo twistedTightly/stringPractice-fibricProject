@@ -8,6 +8,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPStudent.h"
 
 // code format copied from stackoverflow.com/questions/5244830/using-a-delegate-to-pass-data-back-up-the-navigation-stack
 
@@ -16,11 +17,11 @@
 @interface SPCreateStudentViewController : UIViewController {
     id<SPCreateStudentViewControllerDelegate> delegate;
     
-    NSMutableArray* someArray;
+    SPStudent* currentStudent;
 }
 
 @property (nonatomic, assign) id<SPCreateStudentViewControllerDelegate> delegate;
-@property (nonatomic, retain) NSMutableArray* someArray;
+@property (nonatomic, retain) SPStudent* currentStudent;
 
 @end
 

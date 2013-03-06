@@ -7,7 +7,6 @@
 //
 
 #import "SPCreateStudentViewController.h"
-#import "SPStudent.h"
 
 @interface SPCreateStudentViewController ()
 
@@ -26,7 +25,6 @@
 @synthesize currentStudent;
 @synthesize studentNameDisplay;
 //@synthesize delegate;
-@synthesize someArray;
 
 - (void)viewDidLoad
 {
