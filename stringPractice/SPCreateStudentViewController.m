@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *classInputField;
 @property (weak, nonatomic) IBOutlet UILabel *studentNameDisplay;
 
-@property (strong, nonatomic) SPStudent *currentStudent;
+//@property (strong, nonatomic) SPStudent *currentStudent;
 
 
 @end

@@ -47,7 +47,7 @@
 // COPIED from stackoverflow answer
 - (void)SPCreateStudentViewControllerDidFinish:(SPCreateStudentViewController *)SPCreateStudentViewController {
     editedStudent = SPCreateStudentViewController.currentStudent;
-    studentPropertyDisplay.text = editedStudent.firstName;
+    studentPropertyDisplay.text = [editedStudent getStudentFirstName];
 }
 
 @end
