@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface SPStudent : NSObject
-
+/*
 - (void) setFirstName: (NSString *) firstNameInput;
 - (void) setLastName: (NSString *) lastNameInput;
 - (void) setClassName: (NSString *) classNameInput;
-
+*/
 - (NSString *) getClassName;
 - (NSString *) getStudentFirstName;
 - (NSString *) getStudentLastName;

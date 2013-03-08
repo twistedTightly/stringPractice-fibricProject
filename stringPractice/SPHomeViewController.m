@@ -7,7 +7,7 @@
 //
 
 #import "SPHomeViewController.h"
-#import "SPStudent.h"
+#import "SPDataStorage.h"
 
 @interface SPHomeViewController ()
 
