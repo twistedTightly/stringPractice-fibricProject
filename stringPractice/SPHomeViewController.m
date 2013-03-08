@@ -44,11 +44,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-// COPIED from stackoverflow answer
-- (void)SPCreateStudentViewControllerDidFinish:(SPCreateStudentViewController *)SPCreateStudentViewController {
-    NSLog(@"Returning object");
-    editedStudent = SPCreateStudentViewController.currentStudent;
-    studentPropertyDisplay.text = [editedStudent getStudentFirstName];
-}
-
 @end

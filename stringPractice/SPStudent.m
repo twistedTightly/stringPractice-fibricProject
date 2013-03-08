@@ -18,7 +18,7 @@
 
 @implementation SPStudent
 
-
+// I thought that that synthesizing created getters/setters...why do I need them implemented below, too?
 @synthesize firstName = _firstName;
 @synthesize lastName = _lastName;
 @synthesize className = _className;
