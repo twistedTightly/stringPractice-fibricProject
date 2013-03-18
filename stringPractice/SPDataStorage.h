@@ -10,4 +10,7 @@
 
 @interface SPDataStorage : NSObject
 
+@property (strong, nonatomic) NSMutableArray* rubrics;
+@property (strong, nonatomic) NSMutableArray* students;
+
 @end

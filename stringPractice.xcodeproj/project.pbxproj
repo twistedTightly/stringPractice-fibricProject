@@ -96,6 +96,8 @@
 		B0174FC816D56B30002E9B34 /* stringPractice */ = {
 			isa = PBXGroup;
 			children = (
+				B0BEAD3D16D7C9DC00D92C36 /* SPStudent.h */,
+				B0BEAD3E16D7C9DC00D92C36 /* SPStudent.m */,
 				B0174FD116D56B30002E9B34 /* SPAppDelegate.h */,
 				B0174FD216D56B30002E9B34 /* SPAppDelegate.m */,
 				B0174FDA16D56B30002E9B34 /* MainStoryboard_iPhone.storyboard */,
@@ -106,8 +108,6 @@
 				B0102ED516EA4BA1000FF10A /* SPDataStorage.m */,
 				B0174FE016D56B30002E9B34 /* SPCreateStudentViewController.h */,
 				B00F511716E66DD0003D490A /* SPCreateStudentViewController.m */,
-				B0BEAD3D16D7C9DC00D92C36 /* SPStudent.h */,
-				B0BEAD3E16D7C9DC00D92C36 /* SPStudent.m */,
 				B0174FC916D56B30002E9B34 /* Supporting Files */,
 			);
 			path = stringPractice;

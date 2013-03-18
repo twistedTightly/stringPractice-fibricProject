@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *classInputField;
 @property (weak, nonatomic) IBOutlet UILabel *studentNameDisplay;
 
-//@property (strong, nonatomic) SPStudent *currentStudent;
+//@property (strong, nonatomic) SPStudent *currentStudent; // Why did I comment this out?
 
 
 @end
@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   currentStudent = [[SPStudent alloc] init];
+    currentStudent = [[SPStudent alloc] init];
     
     // Enables the user to stop editing the text field when they tap outside the field
     UITapGestureRecognizer *tapScroll = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapped)];
@@ -70,11 +70,13 @@
 
 // Ends editing on touch outside of field - input will be saved, keyboard will be dismissed
 - (void) tapped {
+    NSLog(@"tapped to end editing method");
     [self.view endEditing:YES];
 }
 
 // COPIED from stackoverflow answer
 - (IBAction)doneButtonPressed:(id)sender {
+    NSLog(@"Done button pressed method");
     [delegate SPCreateStudentViewControllerDidFinish:self];
 }
 

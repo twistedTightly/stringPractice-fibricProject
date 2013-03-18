@@ -7,21 +7,27 @@
 //
 
 #import "SPDataStorage.h"
+#import "SPHomeViewController.h"
+#import "SPStudent.h"
 
 @interface SPDataStorage()
 
-@property (strong, nonatomic) NSMutableArray* rubrics;
-@property (strong, nonatomic) NSMutableArray* students;
+@property (strong, nonatomic) SPStudent* editedStudent;
 
 @end
 
+
 @implementation SPDataStorage
+
+@synthesize editedStudent;
 
 // COPIED from stackoverflow answer
 - (void)SPCreateStudentViewControllerDidFinish:(SPCreateStudentViewController *)SPCreateStudentViewController {
     NSLog(@"Returning object");
+    editedStudent = [[SPStudent alloc] init];
+    
     editedStudent = SPCreateStudentViewController.currentStudent;
-    studentPropertyDisplay.text = [editedStudent getStudentFirstName];
+    //studentPropertyDisplay.text = [editedStudent getStudentFirstName];
 }
 
 @end
