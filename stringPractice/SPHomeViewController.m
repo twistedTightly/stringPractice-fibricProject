@@ -48,11 +48,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Setters/Getters overriden
+
+// Lazy instantiation
+- (NSMutableArray *) students {
+    if (!_students) {
+        _students = [[NSMutableArray alloc] init];
+    }
+    
+    return _students;
+}
+
+-(NSMutableArray *)rubrics {
+    if (!_rubrics) {
+        _rubrics = [[NSMutableArray alloc] init];
+    }
+    
+    return _rubrics;
+}
+
 #pragma mark - Model Methods
 
 - (void) addStudent:(SPStudent *) editedStudent {
+    NSLog( @"Add student called");
     if (!editedStudent) {
         [self.students addObject:editedStudent];
+        NSLog(@"%@", [(SPStudent *)(self.students[0]) firstName] ); // A string's description is itself
     }
 }
 

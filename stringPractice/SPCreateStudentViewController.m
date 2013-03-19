@@ -72,8 +72,10 @@
 
 - (IBAction)saveNewStudent {
     // Need to add checking that student has all fields filled
-    if ([self.navigationController.parentViewController isKindOfClass:[SPHomeViewController class]]) {
-        [(SPHomeViewController *)self.navigationController.parentViewController addStudent:self.currentStudent];
+    NSLog( @"%@", self.parentViewController);
+    
+    if ([self.parentViewController isKindOfClass:[SPHomeViewController class]]) {
+        [(SPHomeViewController *)self.parentViewController addStudent:self.currentStudent];
     }
     
     [self.navigationController popViewControllerAnimated:YES];

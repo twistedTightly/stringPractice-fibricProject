@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "SPStudent.h"
 
-
 @interface SPHomeViewController : UIViewController
 
 - (void) addStudent:(SPStudent *) editedStudent;
