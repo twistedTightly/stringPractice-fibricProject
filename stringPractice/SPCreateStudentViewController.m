@@ -15,28 +15,22 @@
 @property (weak, nonatomic) IBOutlet UITextField *classInputField;
 @property (weak, nonatomic) IBOutlet UILabel *studentNameDisplay;
 
-//@property (strong, nonatomic) SPStudent *currentStudent; // Why did I comment this out?
+@property (strong, nonatomic) SPStudent *currentStudent;
 
 
 @end
 
 @implementation SPCreateStudentViewController
 
-@synthesize currentStudent;
-@synthesize studentNameDisplay;
-//@synthesize delegate;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    currentStudent = [[SPStudent alloc] init];
+    self.currentStudent = [[SPStudent alloc] init];
     
     // Enables the user to stop editing the text field when they tap outside the field
     UITapGestureRecognizer *tapScroll = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapped)];
     tapScroll.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapScroll];
-    
-	// Do any additional setup after loading the view, typically from a nib.
     
 }
 
@@ -48,17 +42,17 @@
 
 // Save string input by user to currentStudent object
 - (IBAction)firstNameEdited:(id)sender {
-    currentStudent.firstName = self.firstNameInputField.text;
-    studentNameDisplay.text = [currentStudent getStudentFirstName];
+    self.currentStudent.firstName = self.firstNameInputField.text;
+    self.studentNameDisplay.text = [self.currentStudent firstName];
 }
 
 - (IBAction)lastNameEdited:(id)sender {
-   currentStudent.lastName = self.lastNameInputField.text;
-   studentNameDisplay.text = [currentStudent getStudentLastName];
+   self.currentStudent.lastName = self.lastNameInputField.text;
+   self.studentNameDisplay.text = [self.currentStudent lastName];
 }
 
-- (IBAction)classNameEdited:(id)sender {currentStudent.className = self.lastNameInputField.text;
-    studentNameDisplay.text = [currentStudent getClassName];
+- (IBAction)classNameEdited:(id)sender {self.currentStudent.className = self.lastNameInputField.text;
+    self.studentNameDisplay.text = [self.currentStudent className];
 }
 
 
@@ -73,12 +67,5 @@
     NSLog(@"tapped to end editing method");
     [self.view endEditing:YES];
 }
-
-// COPIED from stackoverflow answer
-- (IBAction)doneButtonPressed:(id)sender {
-    NSLog(@"Done button pressed method");
-    [delegate SPCreateStudentViewControllerDidFinish:self];
-}
-
 
 @end

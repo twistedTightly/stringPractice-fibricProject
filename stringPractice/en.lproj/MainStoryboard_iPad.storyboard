@@ -67,10 +67,10 @@
                             <constraint firstItem="2WJ-Ho-9CB" firstAttribute="leading" secondItem="TcN-rC-TuI" secondAttribute="leading" type="default" id="D4n-SW-A4E"/>
                             <constraint firstItem="TcN-rC-TuI" firstAttribute="trailing" secondItem="2WJ-Ho-9CB" secondAttribute="trailing" type="default" id="DAj-Dx-Pw2"/>
                             <constraint firstAttribute="bottom" secondItem="TcN-rC-TuI" secondAttribute="bottom" constant="143" id="HRO-Xs-OPp"/>
-                            <constraint firstItem="6cB-mR-ILa" firstAttribute="leading" secondItem="KMX-qs-sWG" secondAttribute="leading" constant="370" id="JF8-Di-CRx"/>
                             <constraint firstAttribute="bottom" secondItem="2WJ-Ho-9CB" secondAttribute="bottom" constant="69" id="KH8-x8-aIa"/>
+                            <constraint firstItem="6cB-mR-ILa" firstAttribute="top" secondItem="KMX-qs-sWG" secondAttribute="top" constant="288" id="dSM-ek-nDa"/>
                             <constraint firstAttribute="trailing" secondItem="TcN-rC-TuI" secondAttribute="trailing" constant="61" id="gJ9-wf-WKd"/>
-                            <constraint firstItem="6cB-mR-ILa" firstAttribute="top" secondItem="KMX-qs-sWG" secondAttribute="top" constant="302" id="r0e-DS-opf"/>
+                            <constraint firstItem="6cB-mR-ILa" firstAttribute="leading" secondItem="KMX-qs-sWG" secondAttribute="leading" constant="367" id="n8o-Yw-XBC"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -84,7 +84,7 @@
             </objects>
             <point key="canvasLocation" x="-1647" y="-353"/>
         </scene>
-        <!--Create Student View Controller-->
+        <!--Create Student View Controller - Create or Edit a Student-->
         <scene sceneID="4">
             <objects>
                 <viewController id="2" customClass="SPCreateStudentViewController" sceneMemberID="viewController">
@@ -147,21 +147,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="pnd-8g-5MV" firstAttribute="top" secondItem="5" secondAttribute="top" constant="227" id="4ft-DX-zUB"/>
                             <constraint firstItem="FCK-eh-ynx" firstAttribute="baseline" secondItem="3DC-Vv-Nx2" secondAttribute="baseline" type="default" id="6So-nc-qO7"/>
                             <constraint firstItem="3DC-Vv-Nx2" firstAttribute="leading" secondItem="D3R-sI-j9y" secondAttribute="leading" type="default" id="Swg-Pb-Q7G"/>
                             <constraint firstItem="D3R-sI-j9y" firstAttribute="trailing" secondItem="you-pd-rD6" secondAttribute="trailing" type="default" id="UXI-i2-1k2"/>
                             <constraint firstItem="pnd-8g-5MV" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="73" id="XYR-ly-IsE"/>
                             <constraint firstItem="3DC-Vv-Nx2" firstAttribute="centerY" secondItem="5" secondAttribute="centerY" type="default" id="YZd-wq-zUZ"/>
+                            <constraint firstItem="you-pd-rD6" firstAttribute="top" secondItem="5" secondAttribute="top" constant="223" id="cKn-iH-v8H"/>
                             <constraint firstItem="D3R-sI-j9y" firstAttribute="leading" secondItem="you-pd-rD6" secondAttribute="leading" type="default" id="gRc-Fm-oDW"/>
                             <constraint firstItem="you-pd-rD6" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="250" id="go0-Mr-1le"/>
-                            <constraint firstItem="D3R-sI-j9y" firstAttribute="top" secondItem="5" secondAttribute="top" constant="292" id="iah-CJ-lSr"/>
-                            <constraint firstItem="you-pd-rD6" firstAttribute="top" secondItem="5" secondAttribute="top" constant="223" id="nDU-tj-duB"/>
+                            <constraint firstItem="pnd-8g-5MV" firstAttribute="top" secondItem="5" secondAttribute="top" constant="227" id="l2e-Zy-2eI"/>
                             <constraint firstAttribute="trailing" secondItem="FCK-eh-ynx" secondAttribute="trailing" constant="405" id="sB9-81-bUs"/>
+                            <constraint firstItem="D3R-sI-j9y" firstAttribute="top" secondItem="5" secondAttribute="top" constant="292" id="sw8-rn-4bt"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1I2-K3-U9I"/>
+                    <navigationItem key="navigationItem" title="Create or Edit a Student" id="1I2-K3-U9I"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="classInputField" destination="3DC-Vv-Nx2" id="hXY-f1-iKH"/>
@@ -192,29 +192,6 @@
             <point key="canvasLocation" x="-324" y="41"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SPCreateStudentViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPCreateStudentViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="classNameEdited:"/>
-                <relationship kind="action" name="firstNameEdited:"/>
-                <relationship kind="action" name="lastNameEdited:"/>
-                <relationship kind="outlet" name="classInputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="firstNameInputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="lastNameInputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="studentNameDisplay" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SPHomeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPHomeViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="studentPropertyDisplay" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -7,7 +7,6 @@
 //
 
 #import "SPHomeViewController.h"
-#import "SPDataStorage.h"
 
 @interface SPHomeViewController ()
 
@@ -19,9 +18,6 @@
 @end
 
 @implementation SPHomeViewController
-
-@synthesize studentPropertyDisplay;
-@synthesize editedStudent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +32,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // Changes the navigation bar's back item label
+    self.navigationItem.backBarButtonItem =
+    [[UIBarButtonItem alloc] initWithTitle:@"Cancel"
+                                     style:UIBarButtonItemStyleBordered
+                                    target:nil
+                                    action:nil];
 }
 
 - (void)didReceiveMemoryWarning

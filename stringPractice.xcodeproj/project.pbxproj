@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B003A65516E661CE00483CDE /* SPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B003A65416E661CE00483CDE /* SPHomeViewController.m */; };
 		B00F511816E66DD0003D490A /* SPCreateStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00F511716E66DD0003D490A /* SPCreateStudentViewController.m */; };
-		B0102ED616EA4BA1000FF10A /* SPDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = B0102ED516EA4BA1000FF10A /* SPDataStorage.m */; };
 		B0174FC316D56B30002E9B34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0174FC216D56B30002E9B34 /* UIKit.framework */; };
 		B0174FC516D56B30002E9B34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0174FC416D56B30002E9B34 /* Foundation.framework */; };
 		B0174FC716D56B30002E9B34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0174FC616D56B30002E9B34 /* CoreGraphics.framework */; };
@@ -28,8 +27,6 @@
 		B003A65316E661CE00483CDE /* SPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPHomeViewController.h; sourceTree = "<group>"; };
 		B003A65416E661CE00483CDE /* SPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHomeViewController.m; sourceTree = "<group>"; };
 		B00F511716E66DD0003D490A /* SPCreateStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCreateStudentViewController.m; sourceTree = "<group>"; };
-		B0102ED416EA4BA1000FF10A /* SPDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDataStorage.h; sourceTree = "<group>"; };
-		B0102ED516EA4BA1000FF10A /* SPDataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDataStorage.m; sourceTree = "<group>"; };
 		B0174FBF16D56B30002E9B34 /* stringPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stringPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0174FC216D56B30002E9B34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B0174FC416D56B30002E9B34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +62,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A04E55716F8B28500C206CA /* Create Student Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B00F511716E66DD0003D490A /* SPCreateStudentViewController.m */,
+				B0174FE016D56B30002E9B34 /* SPCreateStudentViewController.h */,
+				B0BEAD3D16D7C9DC00D92C36 /* SPStudent.h */,
+				B0BEAD3E16D7C9DC00D92C36 /* SPStudent.m */,
+			);
+			name = "Create Student Screen";
+			sourceTree = "<group>";
+		};
+		6A04E55816F8B2D300C206CA /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B003A65316E661CE00483CDE /* SPHomeViewController.h */,
+				B003A65416E661CE00483CDE /* SPHomeViewController.m */,
+			);
+			name = "Home Screen";
+			sourceTree = "<group>";
+		};
 		B0174FB616D56B30002E9B34 = {
 			isa = PBXGroup;
 			children = (
@@ -96,18 +113,12 @@
 		B0174FC816D56B30002E9B34 /* stringPractice */ = {
 			isa = PBXGroup;
 			children = (
-				B0BEAD3D16D7C9DC00D92C36 /* SPStudent.h */,
-				B0BEAD3E16D7C9DC00D92C36 /* SPStudent.m */,
+				6A04E55816F8B2D300C206CA /* Home Screen */,
+				6A04E55716F8B28500C206CA /* Create Student Screen */,
 				B0174FD116D56B30002E9B34 /* SPAppDelegate.h */,
 				B0174FD216D56B30002E9B34 /* SPAppDelegate.m */,
 				B0174FDA16D56B30002E9B34 /* MainStoryboard_iPhone.storyboard */,
 				B0174FDD16D56B30002E9B34 /* MainStoryboard_iPad.storyboard */,
-				B003A65316E661CE00483CDE /* SPHomeViewController.h */,
-				B003A65416E661CE00483CDE /* SPHomeViewController.m */,
-				B0102ED416EA4BA1000FF10A /* SPDataStorage.h */,
-				B0102ED516EA4BA1000FF10A /* SPDataStorage.m */,
-				B0174FE016D56B30002E9B34 /* SPCreateStudentViewController.h */,
-				B00F511716E66DD0003D490A /* SPCreateStudentViewController.m */,
 				B0174FC916D56B30002E9B34 /* Supporting Files */,
 			);
 			path = stringPractice;
@@ -200,7 +211,6 @@
 				B0BEAD3F16D7C9DC00D92C36 /* SPStudent.m in Sources */,
 				B003A65516E661CE00483CDE /* SPHomeViewController.m in Sources */,
 				B00F511816E66DD0003D490A /* SPCreateStudentViewController.m in Sources */,
-				B0102ED616EA4BA1000FF10A /* SPDataStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
