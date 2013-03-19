@@ -10,10 +10,11 @@
 
 @interface SPHomeViewController ()
 
-// holds student objects returned from create student view
-@property (strong, nonatomic) NSMutableArray *students;
+
+@property (strong, nonatomic) NSMutableArray *students; // Holds student objects returned from create student view
+@property (strong, nonatomic) NSMutableArray *rubrics;
+//@property (strong, nonatomic) SPStudent* editedStudent;
 @property (weak, nonatomic) IBOutlet UILabel *studentPropertyDisplay;
-@property (strong, nonatomic) SPStudent* editedStudent;
 
 @end
 
@@ -45,6 +46,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Model Methods
+
+- (void) addStudent:(SPStudent *) editedStudent {
+    if (!editedStudent) {
+        [self.students addObject:editedStudent];
+    }
 }
 
 @end

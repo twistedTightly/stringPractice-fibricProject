@@ -7,6 +7,8 @@
 //
 
 #import "SPCreateStudentViewController.h"
+#import "SPHomeViewController.h"
+#import "SPStudent.h"
 
 @interface SPCreateStudentViewController ()
 
@@ -67,5 +69,15 @@
     NSLog(@"tapped to end editing method");
     [self.view endEditing:YES];
 }
+
+- (IBAction)saveNewStudent {
+    // Need to add checking that student has all fields filled
+    if ([self.navigationController.parentViewController isKindOfClass:[SPHomeViewController class]]) {
+        [(SPHomeViewController *)self.navigationController.parentViewController addStudent:self.currentStudent];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 @end

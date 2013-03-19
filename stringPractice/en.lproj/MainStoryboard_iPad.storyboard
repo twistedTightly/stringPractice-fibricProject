@@ -56,11 +56,6 @@
                                     <segue destination="u3z-FF-AJu" kind="push" id="rt8-UT-YsO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cB-mR-ILa">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -68,17 +63,12 @@
                             <constraint firstItem="TcN-rC-TuI" firstAttribute="trailing" secondItem="2WJ-Ho-9CB" secondAttribute="trailing" type="default" id="DAj-Dx-Pw2"/>
                             <constraint firstAttribute="bottom" secondItem="TcN-rC-TuI" secondAttribute="bottom" constant="143" id="HRO-Xs-OPp"/>
                             <constraint firstAttribute="bottom" secondItem="2WJ-Ho-9CB" secondAttribute="bottom" constant="69" id="KH8-x8-aIa"/>
-                            <constraint firstItem="6cB-mR-ILa" firstAttribute="top" secondItem="KMX-qs-sWG" secondAttribute="top" constant="288" id="dSM-ek-nDa"/>
                             <constraint firstAttribute="trailing" secondItem="TcN-rC-TuI" secondAttribute="trailing" constant="61" id="gJ9-wf-WKd"/>
-                            <constraint firstItem="6cB-mR-ILa" firstAttribute="leading" secondItem="KMX-qs-sWG" secondAttribute="leading" constant="367" id="n8o-Yw-XBC"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="2Wn-st-Wbd"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="studentPropertyDisplay" destination="6cB-mR-ILa" id="ni1-AT-1I8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCU-iT-w2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,7 +131,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="doneButtonPressed:" destination="2" eventType="touchDown" id="05B-LM-646"/>
+                                    <action selector="saveNewStudent" destination="2" eventType="touchUpInside" id="yem-3e-ORI"/>
                                 </connections>
                             </button>
                         </subviews>
