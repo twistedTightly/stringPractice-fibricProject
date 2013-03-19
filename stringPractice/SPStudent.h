@@ -10,18 +10,8 @@
 
 @interface SPStudent : NSObject
 
-@property ( strong, nonatomic ) NSString *firstName;
-@property ( strong, nonatomic ) NSString *lastName;
-@property ( strong, nonatomic ) NSString *className;
+@property (nonatomic, strong) NSString* firstName;
+@property (nonatomic, strong) NSString* lastName;
+@property (nonatomic, strong) NSString* className;
 
-// Why doesn't synthesize take care of this??
-/*
-- (void) setFirstName: (NSString *) firstNameInput;
-- (void) setLastName: (NSString *) lastNameInput;
-- (void) setClassName: (NSString *) classNameInput;
-
-- (NSString *) getClassName;
-- (NSString *) getStudentFirstName;
-- (NSString *) getStudentLastName;
-*/
 @end
