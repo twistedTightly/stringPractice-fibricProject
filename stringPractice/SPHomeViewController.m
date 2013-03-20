@@ -50,6 +50,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 #pragma mark - Setters/Getters overridden
 
 // **Must use synthesize if both setter and getter overridden
@@ -71,8 +72,10 @@
     return _rubrics;
 }
 
+
 #pragma mark - Model Methods
 
+// Try to use as delegate method? Was part of OLD passing strategy for passing a new or edited student between VCs
 - (void) addStudent:(SPStudent *) editedStudent {
     NSLog( @"Add student called");
     if (!editedStudent) {

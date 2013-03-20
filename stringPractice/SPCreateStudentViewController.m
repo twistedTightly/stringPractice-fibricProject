@@ -79,7 +79,9 @@
 
 
 #pragma mark - Passing currentStudent to SPHomeViewController via delegate
-
+/* 
+ // OLD method which passed currentStudent directly back to SPHomeVC
+ 
 - (IBAction)saveNewStudent {
     // Need to add checking that student has all fields filled
     NSLog( @"%@", self.parentViewController);
@@ -90,6 +92,6 @@
     
     [self.navigationController popViewControllerAnimated:YES];
 }
-
+*/
 
 @end
