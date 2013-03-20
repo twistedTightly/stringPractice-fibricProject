@@ -5,6 +5,8 @@
 //  Created by Learning Technology Lab on 3/5/13.
 //  Copyright (c) 2013 Learning Technology Lab. All rights reserved.
 //
+//  VC for initial view of the application.  The user will see two tables which contain students and rubrics, respectively.
+//  They can select students or rubrics to edit, select a combination of both to grade, or create/delete a student or rubric
 
 #import "SPHomeViewController.h"
 
@@ -48,7 +50,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Setters/Getters overriden
+#pragma mark - Setters/Getters overridden
+
+// **Must use synthesize if both setter and getter overridden
 
 // Lazy instantiation
 - (NSMutableArray *) students {

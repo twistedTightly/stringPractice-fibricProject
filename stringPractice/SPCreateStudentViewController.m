@@ -5,6 +5,8 @@
 //  Created by Learning Technology Lab on 2/20/13.
 //  Copyright (c) 2013 Learning Technology Lab. All rights reserved.
 //
+//  VC for view in which the user can input the first and last name and associated class of a student
+//  The student object they create or edit will be passed back to the SPHomeVC, which is this VC's delegate
 
 #import "SPCreateStudentViewController.h"
 #import "SPHomeViewController.h"
@@ -14,7 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameInputField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameInputField;
-@property (weak, nonatomic) IBOutlet UITextField *classInputField;
+@property (weak, nonatomic) IBOutlet UITextField *classNameInputField;
 @property (weak, nonatomic) IBOutlet UILabel *studentNameDisplay;
 
 @property (strong, nonatomic) SPStudent *currentStudent;
@@ -42,10 +44,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-// Save string input by user to currentStudent object
+
+#pragma mark - Saving input as properties of currentStudent
+
 - (IBAction)firstNameEdited:(id)sender {
-    self.currentStudent.firstName = self.firstNameInputField.text;
-    self.studentNameDisplay.text = [self.currentStudent firstName];
+    self.currentStudent.firstName = self.firstNameInputField.text;  // text from UITextView stored as a property in an object of type SPStudent
+    self.studentNameDisplay.text = [self.currentStudent firstName]; // property displayed in label for debugging purposes
 }
 
 - (IBAction)lastNameEdited:(id)sender {
@@ -53,10 +57,13 @@
    self.studentNameDisplay.text = [self.currentStudent lastName];
 }
 
-- (IBAction)classNameEdited:(id)sender {self.currentStudent.className = self.lastNameInputField.text;
+- (IBAction)classNameEdited:(id)sender {
+    self.currentStudent.className = self.classNameInputField.text;
     self.studentNameDisplay.text = [self.currentStudent className];
 }
 
+
+#pragma mark - End editing/resign keyboard methods
 
 // Ends editing of text fields for enter button on keyboard, DONE on ipad keyboard
 - (BOOL) textFieldShouldReturn: (UITextField *)textField {
@@ -69,6 +76,9 @@
     NSLog(@"tapped to end editing method");
     [self.view endEditing:YES];
 }
+
+
+#pragma mark - Passing currentStudent to SPHomeViewController via delegate
 
 - (IBAction)saveNewStudent {
     // Need to add checking that student has all fields filled
