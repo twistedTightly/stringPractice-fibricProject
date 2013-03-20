@@ -42,6 +42,8 @@
                                      style:UIBarButtonItemStyleBordered
                                     target:nil
                                     action:nil];
+    
+    SPCreateStudentViewController.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,7 +76,7 @@
 
 
 #pragma mark - Model Methods
-
+/*
 // Try to use as delegate method? Was part of OLD passing strategy for passing a new or edited student between VCs
 - (void) addStudent:(SPStudent *) editedStudent {
     NSLog( @"Add student called");
@@ -82,6 +84,10 @@
         [self.students addObject:editedStudent];
         NSLog(@"%@", [(SPStudent *)(self.students[0]) firstName] ); // A string's description is itself
     }
+}
+*/
+- (void) addStudentToArray:(SPCreateStudentViewController *)sender {
+    NSLog(@"Done button tapped!");
 }
 
 @end

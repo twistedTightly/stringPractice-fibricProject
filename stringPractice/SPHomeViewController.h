@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SPStudent.h"
+#import "SPCreateStudentViewController.h"
 
-@interface SPHomeViewController : UIViewController
+@interface SPHomeViewController : UIViewController <saveStudentDelegate> {
+}
 
-- (void) addStudent:(SPStudent *) editedStudent;
+//- (void) addStudent:(SPStudent *) editedStudent;
 
 @end
