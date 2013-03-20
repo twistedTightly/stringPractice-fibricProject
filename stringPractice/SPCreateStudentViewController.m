@@ -26,6 +26,8 @@
 
 @implementation SPCreateStudentViewController
 
+@synthesize delegate;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -79,10 +81,10 @@
 
 
 #pragma mark - Passing currentStudent to SPHomeViewController via delegate
-/* 
- // OLD method which passed currentStudent directly back to SPHomeVC
  
 - (IBAction)saveNewStudent {
+/*
+ // OLD method which passed currentStudent directly back to SPHomeVC
     // Need to add checking that student has all fields filled
     NSLog( @"%@", self.parentViewController);
     
@@ -91,7 +93,9 @@
     }
     
     [self.navigationController popViewControllerAnimated:YES];
+ */
+    [self.delegate addStudentToArray:self];
 }
-*/
+
 
 @end
