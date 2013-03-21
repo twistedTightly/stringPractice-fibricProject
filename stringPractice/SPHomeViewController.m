@@ -42,8 +42,6 @@
                                      style:UIBarButtonItemStyleBordered
                                     target:nil
                                     action:nil];
-    
-    SPCreateStudentViewController.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,6 +49,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([[segue identifier] isEqualToString:@"createStudentSegue"]) {
+//        SPCreateStudentViewController * studentViewController = [segue destinationViewController];
+//        studentViewController.delegate = self;
+//    }
+//    [super prepareForSegue:segue sender:sender];
+//}
 
 
 #pragma mark - Setters/Getters overridden
@@ -86,7 +92,7 @@
     }
 }
 */
-- (void) addStudentToArray:(SPCreateStudentViewController *)sender {
+- (void) addStudentToArray:(SPStudent *)sender {
     NSLog(@"Done button tapped!");
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="cNN-IC-LDZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="cNN-IC-LDZ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -40,7 +40,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2" kind="push" id="6sW-wh-FST"/>
+                                    <segue destination="2" kind="push" identifier="createStudentSegue" id="6sW-wh-FST"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WJ-Ho-9CB">
@@ -182,26 +182,6 @@
             <point key="canvasLocation" x="-324" y="41"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SPCreateStudentViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPCreateStudentViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="classNameEdited:"/>
-                <relationship kind="action" name="firstNameEdited:"/>
-                <relationship kind="action" name="lastNameEdited:"/>
-                <relationship kind="outlet" name="classNameInputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="firstNameInputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="lastNameInputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="studentNameDisplay" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SPHomeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPHomeViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

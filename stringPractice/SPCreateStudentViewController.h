@@ -10,18 +10,20 @@
 //  Above link used as guideline for setting up delegate relationship between this VC and SPHomeVC
 
 #import <UIKit/UIKit.h>
+#import "SPStudent.h"
 
-@class SPCreateStudentViewController;
-@protocol saveStudentDelegate
+//@class SPCreateStudentViewController;
+@protocol saveStudentDelegate;
 
-- (void) addStudentToArray: (SPCreateStudentViewController *) sender;
+@interface SPCreateStudentViewController : UIViewController
+
+@property (nonatomic, weak) id <saveStudentDelegate> delegate;
+
 
 @end
 
-@interface SPCreateStudentViewController : UIViewController {
-}
+@protocol saveStudentDelegate
 
-@property (nonatomic, weak) IBOutlet id <saveStudentDelegate> delegate;
-
+- (void) addStudentToArray: (SPStudent *) sender;
 
 @end

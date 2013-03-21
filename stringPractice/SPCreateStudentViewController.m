@@ -10,7 +10,6 @@
 
 #import "SPCreateStudentViewController.h"
 #import "SPHomeViewController.h" // Do I need this still, now that I'm using delegates?
-#import "SPStudent.h"
 
 @interface SPCreateStudentViewController ()
 
@@ -94,7 +93,7 @@
     
     [self.navigationController popViewControllerAnimated:YES];
  */
-    [self.delegate addStudentToArray:self];
+    [self.delegate addStudentToArray:self.currentStudent];
 }
 
 
