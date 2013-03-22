@@ -43,7 +43,7 @@
                                     target:nil
                                     action:nil];
     
-    SPCreateStudentViewController.delegate = self;
+    //SPCreateStudentViewController.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
